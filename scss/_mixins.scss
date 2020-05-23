@@ -1,0 +1,36 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+%center{
+ margin: { 
+        left: auto;
+        right: auto;
+    }
+    text-align: center; 
+}
+
+%vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hr($margin, $width) {
+ margin-top: $margin;
+  padding: 2px 0;
+  border: none;
+  background-color: white;
+  animation: grow  2s ease-in;
+  max-width:$width; 
+}
